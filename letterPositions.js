@@ -21,16 +21,16 @@ const assertArraysEqual = (arr1, arr2) => {
 const letterPositions = (sentences) => {
   const results = {};
   sentences = sentences.toLowerCase().split("");
-  for(let i = 0; i < sentences.length; i++) {
-    if(results[sentences[i]]) {
+  for (let i = 0; i < sentences.length; i++) {
+    if (results[sentences[i]]) {
       results[sentences[i]].push(i);
     } else {
       results[sentences[i]] = [i];
     }
   }
-  
+
   return results;
-}
+};
 
 assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("Lighthouse Labs").l, [0,11]);
+assertArraysEqual(letterPositions("Lighthouse Labs").l, [0, 11]);
