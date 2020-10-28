@@ -28,7 +28,6 @@ const words = [
 
 const result = countLetters(words[3]);
 
-assertEqual(result["m"], 1);
 assertEqual(result["s"], 4);
 assertEqual(result["i"], 4);
 assertEqual(result["p"], 2);
