@@ -1,10 +1,14 @@
-const eqArrays = function(arr1, arr2) {
+const eqArrays = function (arr1, arr2) {
   let n = 0;
-  while (n < arr1.length) {
-    if (arr1[n] !== arr2[n])
-      return false;
-    else
-      n++;
+  if (arr1.length !== arr2.length)
+    return false;
+  else {
+    while (n < arr1.length) {
+      if (arr1[n] !== arr2[n])
+        return false;
+      else
+        n++;
+    }
   }
   return true;
 };

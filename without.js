@@ -1,10 +1,14 @@
 const eqArrays = function (arr1, arr2) {
   let n = 0;
-  while (n < arr1.length) {
-    if (arr1[n] !== arr2[n])
-      return false;
-    else
-      n++;
+  if (arr1.length !== arr2.length)
+    return false;
+  else {
+    while (n < arr1.length) {
+      if (arr1[n] !== arr2[n])
+        return false;
+      else
+        n++;
+    }
   }
   return true;
 };
@@ -28,8 +32,8 @@ const without = (source, itemsToRemove) => {
           returnArray.splice(i, 1);
       }
     } else {
-      if(source[i] === itemsToRemove) {
-        returnArray.splice(i,1);
+      if (source[i] === itemsToRemove) {
+        returnArray.splice(i, 1);
       }
     }
   }
@@ -37,9 +41,5 @@ const without = (source, itemsToRemove) => {
   return returnArray;
 };
 
-assertArraysEqual(without([1, 2, "Hi", 3, 4, 5, 10, 14, "Hi"], 5), [1,2, "Hi", 3, 4, 10, 14, "Hi"]);
+assertArraysEqual(without([1, 2, "Hi", 3, 4, 5, 10, 14, "Hi"], 5), [1, 2, "Hi", 3, 4, 10, 14, "Hi"]);
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
-
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); 
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
