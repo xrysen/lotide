@@ -37,3 +37,5 @@ const test3 = findKey(testObj2, (x) => x.str === 4);
 assertEqual(test1, "noma");
 assertEqual(test2, "paladin");
 assertEqual(test3, undefined);
+
+module.exports = findKey;

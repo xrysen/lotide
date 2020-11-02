@@ -37,3 +37,6 @@ const flatten = (input) => {
 
 assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
 assertArraysEqual(flatten(["Hi", ["What's", "Up"], 5, 1, 6]), ["Hi", "What's", "Up", 5, 1, 6]);
+
+module.exports = flatten;
+
