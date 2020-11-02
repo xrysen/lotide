@@ -7,6 +7,4 @@ const head = function(arr) {
     return undefined;
 };
 
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Yo", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([5]), undefined);
+module.exports = head;
