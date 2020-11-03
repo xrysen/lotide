@@ -1,26 +1,3 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`😁 😁 😁 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🤨 🤨 🤨 Assertion Failed! ${actual} !== ${expected}`);
-  }
-};
-
-const eqArrays = function (arr1, arr2) {
-  let n = 0;
-  if (arr1.length !== arr2.length)
-    return false;
-  else {
-    while (n < arr1.length) {
-      if (arr1[n] !== arr2[n])
-        return false;
-      else
-        n++;
-    }
-  }
-  return true;
-};
-
 // Checks if two objects are equal
 // Returns true if they are, false f they are not
 
@@ -58,8 +35,6 @@ const eqObjects = (obj1, obj2) => {
 // const cd2 = { c: "1", d: ["2", 3, 4] };
 // assertEqual(eqObjects(cd, cd2), false); // => false
 
-assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true);
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false); // => false
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false); // => false
+
 
 module.exports = eqObjects;
