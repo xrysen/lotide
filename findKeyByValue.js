@@ -27,9 +27,4 @@ const bandsByGenre = {
   jPop: "Yui Horie"
 };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-assertEqual(findKeyByValue(bandsByGenre, "Foo Fighters"), "rock");
-assertEqual(findKeyByValue(bandsByGenre, "Metallica"), "metal");
-
 module.exports = findKeyByValue;
